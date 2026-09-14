@@ -13,7 +13,7 @@ const resources = {
     ["visitorName", "Visitor name", "text"],
     ["visitorPhone", "Phone", "text"],
     ["registrationNumber", "Registration number", "text"],
-    ["residentId", "Resident ID", "text"],
+    ["residentId", "Resident ID, email, or SA ID number", "text"],
     ["validFrom", "Valid from", "datetime-local"],
     ["validUntil", "Valid until", "datetime-local"]
   ] },
