@@ -103,7 +103,7 @@ function RecordForm({ resource, record, onCancel, onSave }) {
     {resource.fields.map(([key, label, type, options]) => <label key={key}>{label}
       {type === "select" ? <select value={form[key] || options[0]} onChange={(event) => update(key, event.target.value)}>{options.map((option) => <option key={option}>{option}</option>)}</select>
         : type === "checkbox" ? <input type="checkbox" checked={form[key] ?? true} onChange={(event) => update(key, event.target.checked)} />
-          : <input required={!form._id && key !== "residentId" && key !== "validFrom" && key !== "validUntil"} pattern={key === "idNumber" ? "\\d{13}" : undefined} minLength={key === "password" ? 8 : undefined} type={type} value={form[key] || ""} onChange={(event) => update(key, event.target.value)} />}
+          : <input required={!form._id && key !== "visitorPhone"} pattern={key === "idNumber" ? "\\d{13}" : undefined} minLength={key === "password" ? 8 : undefined} type={type} value={form[key] || ""} onChange={(event) => update(key, event.target.value)} />}
     </label>)}
     <div className="form-actions"><button type="button" className="button outline" onClick={onCancel}>Cancel</button><button className="button dark">Save record</button></div>
   </form>;
